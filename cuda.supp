@@ -1,0 +1,122 @@
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyDtoD
+   fun:cuMemcpyDtoD
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyDtoD_v2
+   fun:cuMemcpyDtoD_v2
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyHtoD
+   fun:cuMemcpyHtoD
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyHtoD_v2
+   fun:cuMemcpyHtoD_v2
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyDtoH
+   fun:cuMemcpyDtoH
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemcpyDtoH_v2
+   fun:cuMemcpyDtoH_v2
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemFree
+   fun:cuMemFree
+   ...
+}
+{
+   <Original_Valgrind_Errors_In_Wrappers>
+   Memcheck:Cond
+   ...
+   fun:cuMemFree_v2
+   fun:cuMemFree_v2
+   ...
+}
+
+
+{
+   <inset_a_suppression_name_here>
+   Memcheck:Cond
+   ...
+   fun:cudaFree
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr1
+   ...
+   fun:cudaMallocHost
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr2
+   ...
+   fun:cudaMallocHost
+   ...
+}
+{
+   Name
+   Memcheck:Addr1
+   ...
+   fun:cudaLaunch
+   ...
+}
+{
+   Name
+   Memcheck:Addr2
+   ...
+   fun:cudaLaunch
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Cond
+   ...
+   fun:cudaChooseDevice
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr1
+   ...
+   fun:cuModuleLoadDataEx
+   ...
+}
+{
+   <insert_a_suppression_name_here>
+   Memcheck:Addr2
+   ...
+   fun:cuModuleLoadDataEx
+   ...
+}
