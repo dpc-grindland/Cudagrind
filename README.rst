@@ -1,0 +1,50 @@
+========================================
+Cudagrind
+========================================
+
+1. Requirements
+========================================
+
+Cudagrind has been tested and runs with the following parameters:
+
+* Valgrind 3.6.0 or higher
+* CUDA SDK 4.0 or higher
+* Compatible CUDA driver
+* GCC 4.4.7 or higher
+
+Different compilers should work if they support the C99 standard
+and GCC's C-(de)constructor extension.
+
+
+
+2. Installation
+========================================
+
+To compile the Cudagrind set the location of both Valgrind's and the CUDA
+driver's INCLUDE and LIB directories in the Makefile. Then call 'make new' to
+build libcudagrind.so and put it in an accessible location.
+
+If the system does not offer a POSIX thread library add '-DCUDAGRIND_NOPTHREAD'
+to the CFLAGS. This stops Cudagrind from being thread-safe for hybrid programs.
+
+
+
+3. Execution
+========================================
+
+To check a program with Cudagrind preload Cudagrind's libcudagrind.so and
+the CUDA driver's 'libcuda.so' in this order
+
+.. code-block:: sh
+
+   export LD_PRELOAD=/path/to/libcudagrind.so:/path/to/libcuda.so:$LD_PRELOAD
+
+. Then execute the program with Valgrind/Memcheck
+
+.. code-block:: sh
+
+   valgrind <executable>
+
+If necessary add a suppression file to avoid display of spurious errors in
+the CUDA runtime. For more information about generating and using suppression
+files see the Valgrind manual.
